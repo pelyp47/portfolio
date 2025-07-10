@@ -1,0 +1,31 @@
+.next
+dist
+build
+coverage
+
+# Node dependencies
+node_modules
+
+# Environment files
+.env
+*.pem
+
+# Git and version control
+.git
+.github
+
+# Public assets (optional, if you don’t want to format .svg etc.)
+public
+
+# Lock files (optional)
+package-lock.json
+
+# VSCode settings (optional)
+.vscode
+
+#configs
+.prettierrc
+next.config.ts
+eslint.config.mjs
+tsconfig.json
+package.json

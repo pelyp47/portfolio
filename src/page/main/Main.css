@@ -1,0 +1,18 @@
+.main {
+}
+
+.main__introduction {
+  background-color: var(--yellow);
+  min-height: 100vh;
+}
+
+.main__header {
+}
+
+.main__introduction-content {
+}
+
+.main__introduction-header {
+  font-family: var(--font-sora);
+  font-weight: 400;
+}

@@ -1,32 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, Manrope } from "next/font/google";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
   subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-sora",
+  display: "swap"
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const manrope = Manrope({
   subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-manrope",
+  display: "swap"
 });
 
 export const metadata: Metadata = {
   title: "Dmytro Pelyp",
-  description: "Professional Portfolio",
+  description: "Professional Portfolio"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body className={`${sora.variable} ${manrope.variable}`}>{children}</body>
     </html>
   );
 }
