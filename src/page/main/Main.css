@@ -4,9 +4,22 @@
 .main__introduction {
   background-color: var(--yellow);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .main__header {
+  display: flex;
+}
+
+.main__header-img {
+  width: 50%;
+  height: 100%;
+}
+
+.main__header-img img {
+  display: block;
+  width: 100%;
 }
 
 .main__introduction-content {

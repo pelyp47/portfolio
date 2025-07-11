@@ -8,6 +8,9 @@ export const Main = () => {
     <div className="main">
       <section className="main__introduction">
         <header className="main__header">
+          <div className="main__header-img">
+            <img src="/main/header_top_polygon.svg" alt="main_top_polygon" />
+          </div>
           <NavMenu
             className="main__nav-menu"
             optionList={[

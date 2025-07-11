@@ -1,0 +1,53 @@
+"use client";
+import gsap from "gsap";
+
+import "./InitialPreloader.css";
+import { useEffect, useRef } from "react";
+
+export const InitialPreloader = ({}) => {
+  const eagleRef = useRef<SVGPathElement>(null);
+  const tl = gsap.timeline({});
+
+  useEffect(() => {
+    if (eagleRef.current) {
+      tl.fromTo(
+        ".initial-preloader__eagle path",
+        {
+          strokeDashoffset: 2 * eagleRef.current.getTotalLength(),
+          strokeDasharray: eagleRef.current.getTotalLength()
+        },
+        {
+          strokeDashoffset: 0,
+          strokeDasharray: eagleRef.current.getTotalLength(),
+          duration: 3.5,
+          ease: "none",
+          repeat: -1
+        }
+      );
+    }
+  }, [eagleRef.current, tl]);
+  return (
+    <div className="initial-preloader">
+      <div className="initial-preloader__quater _1"></div>
+      <div className="initial-preloader__quater _2"></div>
+      <div className="initial-preloader__quater _3"></div>
+      <div className="initial-preloader__quater _4"></div>
+      <div className="initial-preloader__images-wrapper">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="initial-preloader__eagle"
+          viewBox="0 0 36 24"
+          fill="none"
+        >
+          <path
+            ref={eagleRef}
+            strokeLinecap="round"
+            d="M9.26693 19.8366C18.0192 19.4267 15.3279 22.0932 13.3411 23.0235L16.2324 22.7739C17.1809 23.2079 22.5579 18.801 20.5287 21.8664C18.4102 25.0667 33.3531 23.3151 34.5754 9.41801L30.782 7.28585L32.5897 5.17709L29.0115 3.50461L30.0867 1.02535C25.5756 0.942223 16.477 4.88574 14.4375 6.49932C11.8763 8.52559 15.6323 9.09549 16.8561 8.12734C18.0798 7.15919 18.4077 4.33692 17.4907 4.76629C16.1939 5.3735 10.2767 7.66664 10.1185 9.71653M10.1185 9.71653C9.96029 11.7664 11.1449 19.0718 12.5677 19.7228C13.9906 20.3737 1.59662 18.9756 1.18549 20.4853C0.774357 21.995 6.35582 8.84392 10.1185 9.71653Z"
+            stroke="#1B1F3B"
+          />
+        </svg>
+        {/* <img src="/preloader/eagle.svg" alt="eagle preloader" /> */}
+      </div>
+    </div>
+  );
+};
