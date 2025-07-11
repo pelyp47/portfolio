@@ -42,7 +42,7 @@ export const InitialPreloader = ({ children }: { children: React.ReactNode }) =>
                     width: 0
                   },
                   {
-                    width: "20vw",
+                    width: "20vmax",
                     duration: 0.3
                   }
                 )
@@ -55,7 +55,6 @@ export const InitialPreloader = ({ children }: { children: React.ReactNode }) =>
                   {
                     strokeDashoffset: 0,
                     strokeDasharray: welcomeRef.current.getTotalLength(),
-                    width: "20vw",
                     duration: 2
                   }
                 )
