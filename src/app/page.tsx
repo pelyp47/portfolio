@@ -4,7 +4,19 @@ export const metadata = {
   title: "Dmytro Pelyp Portfolio",
   description:
     "Portfolio and projects of Dmytro Pelyp, a fullstack JavaScript developer specializing in modern web apps.",
-  keywords: ["Dmytro", "Pelyp", "Fullstack", "JavaScript", "JS", "Developer", "Web Developer"],
+  keywords: [
+    "Dmytro",
+    "Pelyp",
+    "Dima",
+    "Дмитро",
+    "Пелип",
+    "Діма",
+    "Fullstack",
+    "JavaScript",
+    "JS",
+    "Developer",
+    "Web Developer"
+  ],
   authors: [{ name: "Dmytro Pelyp" }],
   creator: "Dmytro Pelyp",
   openGraph: {

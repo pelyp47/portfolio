@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, Manrope } from "next/font/google";
-
-import "./globals.css";
 import { InitialPreloader } from "src/page/initial-preloader/InitialPreloader";
+import "./globals.css";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -23,17 +22,15 @@ export const metadata: Metadata = {
   description: "Professional Portfolio"
 };
 
-export default function RootLayout() {
-// {
-// children
-// }: Readonly<{
-// children: React.ReactNode;
-// }>
+export default function RootLayout({
+  children
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body className={`${sora.variable} ${manrope.variable}`}>
-        <InitialPreloader />
-        {/* {children} */}
+        <InitialPreloader>{children}</InitialPreloader>
       </body>
     </html>
   );

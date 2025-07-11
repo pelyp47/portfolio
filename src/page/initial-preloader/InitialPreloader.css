@@ -5,11 +5,11 @@
   min-width: 100vw;
   position: fixed;
   z-index: 1000;
+  align-items: stretch;
 }
 
 .initial-preloader__quater {
   width: 50%;
-  height: 50%;
   background-color: var(--white);
 }
 
@@ -18,6 +18,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
 }
 
 .initial-preloader__eagle {
@@ -25,4 +29,8 @@
 }
 
 .initial-preloader__eagle path {
+}
+
+.initial-preloader__welcome {
+  width: 0;
 }
